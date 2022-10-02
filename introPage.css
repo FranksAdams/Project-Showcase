@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: green;
+    background-size: cover;
+    background-size: 250px;
+    width: 100vh;
+    height: 100vh;
+    font-size: large;
+    font-family: cursive;
+    
+}
+
+.wrapper {
+    width: 100vh;
+    height: 60%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border: solid black 1px;
+    margin: auto;
+    animation: fadeIn 20s;
+}
+
+#text2{
+    text-align: center;
+}
+
+
+#gameName{
+    text-align: center;
+    text-decoration: underline;
+}
+
+#introImage{
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+   height: 40%;
+   object-fit: cover;
+    overflow: auto;
+    border: 2px solid black;
+    border-radius: 25px;
+    
+}
+
+#start {
+    position: relative;
+    left: 40%;
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+    font-size: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    animation: fadeIn 20s;
+    animation: shake 2.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+}
+
+#start:hover {
+    color: black;
+    background-color: green;
+    transform: scale(1.5);
+}
