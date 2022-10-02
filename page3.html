@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="page3.css" rel="stylesheet">
+
+    <title>Page 3</title>
+</head>
+
+<body onload="startCountdown(); typeWriter(); receive();"></body>
+
+<!--Div for level animation. -->
+<div id="splash">
+    <h1 id="splash-header">
+        <span class="sptxt">Check the</span><br><span class="sptxt">Prices...</span>
+    </h1>
+</div>
+
+<!-- Customer1 - Containers to hold text for the first customer. -->
+<div id="container">
+    <p id="text1"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick="hide(); clickPlay(); typeWriter1(); ">Okay!</button>
+    </div>
+</div>
+
+<div id="container1" class="containers">
+    <p id="text2"></p>
+    <div>
+        <form id="form1" onsubmit="return false;">
+            <label for="answer">Answer:</label>
+            <input type="text" id="ans1" class="answers">
+            <input id="submit1" type="submit" title="Are you sure?" value="Submit" onclick="hide1(); validate();">
+    </div>
+</div>
+
+<div id="container2" class="containers">
+    <p id="text3"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick="nextCustomer(); typeWriter4();">Next Customer</button>
+    </div>
+</div>
+
+<div id="container3">
+    <p id="text4"></p>
+    <div>
+        <form id="form2" onsubmit="return false;">
+            <label for="answer">Answer:</label>
+            <input type="text" id="ans2" class="answers">
+            <input id="submit2" type="submit" title="Are you sure?" value="Submit" onclick="validate2();">
+    </div>
+</div>
+
+<div id="container4">
+    <p id="text5"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick="getManagerLose();">Get Manager</button>
+    </div>
+</div>
+
+<div id="container5">
+    <p id="text6"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick="nextCustomer(); typeWriter4(); ">Next Customer!</button>
+    </div>
+</div>
+<!-- End Customer1 -->
+
+<!-- Customer2 - Containers to hold text for the second customer. -->
+<div id="container6">
+    <p id="text7"></p>
+    <div>
+        <form id="form3" onsubmit="return false;">
+            <label for="answer">Answer:</label>
+            <input type="text" id="ans3" class="answers">
+            <input id="submit3" type="submit" title="Are you sure?" value="Submit" onclick="hide2(); validate3();">
+    </div>
+</div>
+
+<div id="container7">
+    <p id="text8"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick="nextCustomer2(); typeWriter7();">Next Customer</button>
+    </div>
+</div>
+
+<div id="container8">
+    <p id="text9"></p>
+    <div>
+        <form id="form4" onsubmit="return false;">
+            <label for="answer">Answer:</label>
+            <input type="text" id="ans4" class="answers">
+            <input id="submit4" type="submit" title="Are you sure?" value="Submit" onclick="validate4();">
+    </div>
+</div>
+
+<div id="container9">
+    <p id="text10"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick="getManagerLose();">Get Manager</button>
+    </div>
+</div>
+
+<div id="container10">
+    <p id="text11"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick="nextCustomer2(); typeWriter7(); ">Next Customer!</button>
+    </div>
+</div>
+<!-- End Customer2 -->
+
+<!-- Customer3 - Containers to hold text for the third customer. -->
+<div id="container11">
+    <p id="text12"></p>
+    <div>
+        <form id="form5" onsubmit="return false;">
+            <label for="answer">Answer:</label>
+            <input type="text" id="ans5" class="answers">
+            <input id="submit5" type="submit" title="Are you sure?" value="Submit" onclick="hide3(); validate5();">
+    </div>
+</div>
+
+<div id="container12">
+    <p id="text13"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick="managerMS(); typeWriter10(); sendToNext();">Talk to Manager.</button>
+    </div>
+</div>
+
+<div id="container13">
+    <p id="text14"></p>
+    <div>
+        <form id="form6" onsubmit="return false;">
+            <label for="answer">Answer:</label>
+            <input type="text" id="ans6" class="answers">
+            <input id="submit6" type="submit" title="Are you sure?" value="Submit" onclick="validate6();">
+    </div>
+</div>
+
+<div id="container14">
+    <p id="text15"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick="getManagerLose();">Get Manager</button>
+    </div>
+</div>
+
+<div id="container15">
+    <p id="text16"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick="managerMS(); typeWriter10(); sendToNext(); ">Talk to Manager.</button>
+    </div>
+</div>
+<!-- End Customer3 -->
+
+<!-- Manager Message - Container to hold text for the manager end message. -->
+<div id="container16">
+    <p id="text17"></p>
+    <div id="option-buttons" class="btn-grid">
+        <button class="btn" onclick=" managerHide(); doorHint(); sendToNext();">Okay!</button>
+    </div>
+</div>
+<!--End Manager Message -->
+
+<!--Timer for the level. -->
+<div id=wholeTimer>
+    <h1>Timer: </h1>
+    <h1 id="timeOut"></h1>
+</div>
+
+<!--Points display -->
+<div id="wholePoints">
+    <h1 id="points1"> Points: </h1>
+</div>
+
+<!--Relative multimedia, images and audio. -->
+<a href="#" id="DoorLink">
+    <img id="toilet-door" class="toiletDoor" src="img/toiletdoor.png" alt="toilet door" onclick="doorlock(); playDoor();"></a>
+
+<div id="keg1"><img id="keg-one" src="img/keg.png" alt="keg"></div>
+<div id="keg2"><img id="keg-two" src="img/keg.png" alt="keg"></div>
+<!--https://pixabay.com/photos/barrel-alufass-beer-keg-storage-3025096/ -->
+
+<div id="prices"><img id="price-list" src="img/price-list.png" alt="Price List"></div>
+<!--Image made in Microsoft Paint. -->
+
+<div id="beer"><img id="beer" src="img/beer-bottle.png"
+    onclick="this.style.display='none';drunkEffect();" alt="beer-bottle"></div>
+<!--https://pixabay.com/illustrations/beer-bottle-heineken2-2679980/ -->
+
+<audio id="audio1" src="Audio/bar-background-audio.mp3"></audio>
+<!--https://www.zapsplat.com/music/bar-ambience-30-people-in-small-busy-bar-mixed-happy-chatter-with-occasional-glass-clinks-close-to-medium-perspective/ -->
+
+<audio id="door-creak" src="Audio/door_2.mp3"></audio>
+<!--https://www.freesoundeffects.com/free-track/door-2-426730/ -->
+
+<script type="text/javascript" src="JScript/animation.js"></script>
+<script type="text/javascript" src="JScript/page3.js"></script>
+</body>
+
+</html>

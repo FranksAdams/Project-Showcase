@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page 8</title>
+    <link rel="stylesheet" href="page8.css">
+    <script>
+         function allowDrop(ev) {
+        ev.preventDefault();
+      }
+      
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+      
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        addPointBar();
+      }
+    </script>
+</head>
+
+<body class="pic" onload="startCountdown(); receive();">
+    <div class="img">
+        <div class="wrapper">
+
+           <!--Timer for the level. -->
+<div id=wholeTimer>
+    <h1>Timer: </h1>
+    <h1 id="timeOut"></h1>
+</div>   
+           
+            <div id="wholePoints">
+                <h1 id="points1"> Points: </h1>
+            </div>
+<br>
+            </div>
+
+            <div class="timeOut">
+         
+                <div class="dropZone1" id="Zone1" ondrop="drop(event)" ondragover="allowDrop(event);">
+                    <p>Drag the food here as fast as you can!</p>
+                    <!-- burger & chips -->
+                    
+                </div>
+
+                </div>
+<br>
+                <div class="orderUp">
+                <div draggable="true" class="orders" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p>Order Up!</p>
+
+
+                    <img class="dropZone1" id="burger" src="img/burger.png" draggable="true" ondragstart="drag(event)"width="50" height="50" />
+                    <img class="dropZone1" id="chips" src="img/chips.png" draggable="true" ondragstart="drag(event)" width="50" height="50" />
+                    <img class="dropZone1" id="donut" src="img/donut.png" width="50" height="50" />
+                    <img class="dropZone1" id="menu1" src="img/menu.png" draggable="true" ondragstart="drag(event)" width="50" height="50" />
+                    <img class="dropZone1" id="menu2" src="img/menu.png" draggable="true" ondragstart="drag(event)" width="50" height="50" />
+                    <img  class="dropZone1" id="menu3" src="img/menu.png" draggable="true" ondragstart="drag(event)" width="50" height="50" />
+                    <img class="dropZone1" id="duff" src="img/duff.png" width="50" height="50" />
+                    <img class="dropZone1" id="juice" src="img/kidsjuice.png" draggable="true" ondragstart="drag(event)" width="50" height="50" />
+                    <img  class="dropZone1" id="guinness1" src="img/guin.jpeg" draggable="true" ondragstart="drag(event)" width="50" height="50" />
+                    <img class="dropZone1" id="pasta" src="img/pasta.png" width="50" height="50" />
+                    <img class="dropZone1" id="guinness2" src="img/guin.jpeg" draggable="true" ondragstart="drag(event)" width="50" height="50" />
+                    <img  class="dropZone1" id="fanta" src="img/fanta.png" draggable="true" ondragstart="drag(event)" width="50" height="50" />
+                    <img class="dropZone1" id="cup" src="img/cup.png" width="50" height="50" />
+                </div>
+</div>
+</div>
+</body>
+
+<script src="JScript/page8.js"></script>
+
+</html>

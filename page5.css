@@ -1,0 +1,96 @@
+body, html{
+  height: 100%;
+  font-family: cursive;
+  
+}
+#splash {
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  transition: 1s;
+}
+
+#splash-header {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+}
+
+.sptxt {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+
+.sptxt.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.sptxt.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+
+.img{
+  background-image: url(img/dragdropstart\ copy.jpg);
+  height: 850px;
+  padding: 0px;
+  zoom: 1;
+  display: block;
+  *display: inline;
+  *float: none;
+
+  background-repeat:no-repeat;
+  background-color:white;
+  background-attachment: fixed;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+
+body, h1, p {
+
+    text-align: center;
+    font-family: cursive;
+    color: green;
+    background-color: white;
+    height: -390%;
+}
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: green;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    height: -390%;
+  }
+  
+  .button:hover {background-color: white}
+  
+  .button:active {
+    background-color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  #timeOut{
+    visibility: hidden;
+  }

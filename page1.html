@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Page 1</title>
+    
+    <link rel="stylesheet" href="page1.css">
+    </head>
+    <body class="bg">
+        <script type="text/javascript" src="script_emily.js"></script>
+
+        <div id="splash">
+            <h1 id="splash-header">
+                <span class="sptxt">Bar</span><br><span class="sptxt">Simulator...</span>
+            </h1>
+        </div>
+    
+        <h1>Trial Shift Application</h1><br>
+        <p>To apply for a trial shift in the bar of your choice please enter your details below:</p><br>
+        <form id="introForm" onsubmit="return false;">
+            <label for="fname" id="fname">First & Last Name:</label><br>
+            <input type="text" id="name"  ><br><br>
+
+            <label for="age" id="ageDetail"> Age: </label><br>
+            <input type="number" min="18" id="age">
+           <p id="age1"></p><br>
+
+
+           <label for="drinks" id="favDrink"> What is your favorite drink?</label><br><br>
+
+           <label class="drinks" value = Vodka_Coke> Vodka Coke <input type="radio"  checked="checked" name="radio"> 
+            <span class="checkmark"></span></label><br>
+           
+           
+            <label class="drinks">Guinness  <input type="radio" checked="checked" name="radio" >
+            <span class="checkmark"></span></span> </label><br>
+
+            
+            <label class="drinks" >Water<input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span></label><br>
+
+            <label class="drinks" >Strawberry Daiquiri <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span></label><br>
+
+            <label class="drinks" >Martini <input type="radio" checked="checked" name="radio">
+             <span class="checkmark"></span></label><br>
+
+            <label class="drinks" >Beer <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span></label><br>
+
+            <label class="drinks" >Tequila <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span></label><br>
+
+            <label for="email" id="email">Enter your email:</label><br>
+             <input type="text" id="emails"><br><br>
+
+             <label for="bar" id="bar">Pick a bar:</label><br>
+             <optgroup label="Take your pick!"></optgroup>
+             <select name="bar" id="barInput">
+             <option value="Laverys" >Laverys</option>
+             <option value="Limelight" >Limelight</option>
+             <option value="Thompsons" >Thompsons</option>
+             </select><br><br>
+            
+            <input type="submit" value="Click here to submit your details!"  onclick="validate();">
+
+            
+
+        </form>
+
+        
+        <script src="JScript/page1.js"></script>
+        <script type="text/javascript" src="JScript/animation.js"></script>
+    </body>
+</html>

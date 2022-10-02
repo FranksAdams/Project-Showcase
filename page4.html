@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Page 4</title>
+        <link href="page4.css" rel="stylesheet">
+</head>
+
+<body onload="startCountdown(); receive(); " onclick=" PlayMusic();">
+
+        <!--Div for level animation. -->
+        <div id="splash">
+                <h1 id="splash-header">
+                        <span class="sptxt">The</span><br><span class="sptxt">Toilets...</span>
+                </h1>
+        </div>
+
+        <div id="toilet-room"></div>
+
+        <!--Div for for level instructions. -->
+        <div id="container">
+                <p id="text">God! This place is a mess, I better clean it up before someone sees this.. <br> Click on
+                        the rubbish to pick it up!</p>
+        </div>
+        
+        <div id="beer1"><img id="beer-one" src="img/beer-bottle.png" onclick="this.style.display='none'; addPoint(); playBin();"
+                        alt="beer bottle"></div>
+        <div id="beer2"><img id="beer-two" src="img/beer-bottle.png" onclick="this.style.display='none';addPoint(); playBin();"
+                        alt="beer bottle"></div>
+        <div id="beer3"><img id="beer-three" src="img/beer-bottle.png"
+                        onclick="this.style.display='none';addPoint(); playBin();" alt="beer bottle"></div>
+        <!--https://pixabay.com/illustrations/beer-bottle-heineken2-2679980/ -->
+        
+        <div id="tin1"><img id="tin-one" src="img/tin-can.png" onclick="this.style.display='none';addPoint(); playBin();"
+                        alt="tin can"></div>
+        <div id="tin2"><img id="tin-two" src="img/tin-can.png" onclick="this.style.display='none';addPoint(); playBin();"
+                        alt="tin can"></div>
+        <div id="tin3"><img id="tin-three" src="img/tin-can.png" onclick="this.style.display='none';addPoint(); playBin();"
+                        alt="tin can"></div>
+        <!--https://pixabay.com/vectors/soda-can-beer-beverage-drink-575433/ -->
+        
+        <div id="graffiti1"><img id="graffiti-one" src="img/smileyFace.png" onclick="this.style.display='none';addPoint(); playBin();" alt="graffiti"></div>
+        <div id="graffiti2"><img id="graffiti-two" src="img/smileyFace.png" onclick="this.style.display='none';addPoint(); playBin();" alt="graffiti"></div>
+        <div id="graffiti3"><img id="graffiti-three" src="img/smileyFace.png" onclick="this.style.display='none';addPoint(); playBin();" alt="graffiti"></div>
+        <div id="graffiti4"><img id="graffiti-four" src="img/smileyFace.png" onclick="this.style.display='none';addPoint(); playBin();" alt="graffiti"></div>
+        <!--https://pngtree.com/so/Smile -->
+        
+        <div id="facemask1"><img id="facemask-one" src="img/face-mask.png"
+                        onclick="this.style.display='none';addPoint(); playBin();" alt="facemask"></div>
+        <!--https://pixabay.com/vectors/face-mask-mask-coronavirus-5588047/ -->
+        
+        <div id="cigs"><img id="cigarettes" src="img/cigs.png" onclick="this.style.display='none';addPoint(); playBin();"
+                        alt="cigarettes"></div>
+        <!--https://pixabay.com/photos/cigarette-package-tobacco-to-smoke-1841216/ -->
+
+        <h1>Timer: </h1>
+        <div id="backLevel">
+                <div id="frontLevel"></div>
+        </div>
+
+        <h1 id="timeOut"></h1>
+
+        <div>
+                <h1 id="points1"> Points: </h1>
+        </div>
+
+        <audio id="audio2" src="Audio/toilet-background-noise.mp3"></audio>
+         <!--https://www.zapsplat.com/music/public-toilet-ambience-extractor-fan-man-urinates-in-cubicle-then-flushes-toilet/-->
+
+        <audio id="bin-noise" src="Audio/trashcan2.mp3"></audio>
+        <!--https://www.freesoundeffects.com/free-track/trashcan2-427030/can/ -->
+
+        <script type="text/javascript" src="JScript/animation.js"></script>
+        <script type="text/javascript" src="JScript/page4.js"></script>
+</body>
+
+</html>
